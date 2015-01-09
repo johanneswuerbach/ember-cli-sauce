@@ -1,4 +1,4 @@
-# Ember-cli-sauce
+# ember-cli-sauce [![Build Status](https://travis-ci.org/johanneswuerbach/ember-cli-sauce.svg?branch=master)](https://travis-ci.org/johanneswuerbach/ember-cli-sauce)
 
 Cross browser testing for your ember-cli app using SauceLabs.
 
@@ -10,8 +10,8 @@ Cross browser testing for your ember-cli app using SauceLabs.
 
 * Get a SauceLabs account.
 * Make sure Sauce credentials are set in env:
-** `SAUCE_USERNAME` - your SauceLabs username
-** `SAUCE_ACCESS_KEY` - your SauceLabs API/Access key.
+  * `SAUCE_USERNAME` - your SauceLabs username
+  * `SAUCE_ACCESS_KEY` - your SauceLabs API/Access key.
 * Add your browsers into the `launchers` section of your `testem.json`, Chrome was already added for you.
 * Add your launchers to your `launch_in_ci` array, when you want to test against them during CI
 
