@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-sauce",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Cross browser testing for your ember-cli app using SauceLabs.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,14 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johanneswuerbach/ember-cli-sauce.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Johannes Würbach <johannes.wuerbach@googlemail.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -33,9 +36,19 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "saucelabs",
+    "ember",
+    "browser",
+    "testing"
   ],
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "after": [
+      "ember-cli-qunit"
+    ]
+  },
+  "dependencies": {
+    "saucie": "johanneswuerbach/sauce-js-tests-integration#fail-unfinished-runs"
   }
 }

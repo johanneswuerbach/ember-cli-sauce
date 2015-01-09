@@ -1,17 +1,19 @@
 # Ember-cli-sauce
 
-This README outlines the details of collaborating on this Ember addon.
+Cross browser testing for your ember-cli app using SauceLabs.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install:addon ember-cli-sauce`
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+* Get a SauceLabs account.
+* Make sure Sauce credentials are set in env:
+** `SAUCE_USERNAME` - your SauceLabs username
+** `SAUCE_ACCESS_KEY` - your SauceLabs API/Access key.
+* Add your browsers into the `launchers` section of your `testem.json`, Chrome was already added for you.
+* Add your launchers to your `launch_in_ci` array, when you want to test against them during CI
 
 ## Running Tests
 
