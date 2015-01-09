@@ -21,7 +21,7 @@ module.exports = {
 
     testemJSON.launchers = testemJSON.launchers || {};
     testemJSON.launchers.SL_Chrome = {
-      exe: './node_modules/.bin/saucie',
+      exe: './node_modules/.bin/ember-cli-sauce',
       args: ['-b', 'chrome', '--at', '--no-ct', '-u'],
       protocol: 'browser'
     };
