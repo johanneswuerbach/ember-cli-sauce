@@ -4,7 +4,7 @@ language: node_js
 sudo: false
 env:
   global:
-  - SAUCE_USERNAME=htmlbars-ci
+  - SAUCE_USERNAME=ember-cli-sauce-ci
   - SAUCE_ACCESS_KEY=be8498f4-3dc5-4256-94c6-40dd9247f2e6
 
 cache:
