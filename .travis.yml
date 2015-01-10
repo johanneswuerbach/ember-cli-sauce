@@ -22,6 +22,8 @@ install:
   - bower install
 before_script:
   - curl -L https://gist.githubusercontent.com/johanneswuerbach/ce15304c6d33538ecc6e/raw/sauce-connect.sh | bash
+  - rm ./node_modules/.bin/ember-cli-sauce || true
+  - ln -s $PWD/bin/cli.js ./node_modules/.bin/ember-cli-sauce
 script:
   - npm test
   - npm run test-sauce
