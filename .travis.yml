@@ -2,6 +2,10 @@
 language: node_js
 
 sudo: false
+env:
+  global:
+  - SAUCE_USERNAME=htmlbars-ci
+  - SAUCE_ACCESS_KEY=be8498f4-3dc5-4256-94c6-40dd9247f2e6
 
 cache:
   directories:
@@ -14,7 +18,13 @@ before_install:
 install:
   - npm install -g bower
   - npm install
+  - npm prune
   - bower install
-
+before_script:
+  - curl -L https://gist.githubusercontent.com/johanneswuerbach/ce15304c6d33538ecc6e/raw/sauce-connect.sh | bash
 script:
   - npm test
+  - npm run test-sauce
+after_script:
+  - sleep 10
+  - killall sc
