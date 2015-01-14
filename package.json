@@ -10,7 +10,7 @@
     "start": "ember server",
     "build": "ember build",
     "test": "ember test",
-    "test-sauce": "ember sauce --add-to-ci && ember test"
+    "test-sauce": "ember sauce --add-to-ci && ember sauce -b 'internet explorer' -p 'Windows 8.1' --protocol=tap --add-to-ci && ember test"
   },
   "bin": "./bin/cli.js",
   "repository": {
