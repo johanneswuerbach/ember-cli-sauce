@@ -51,6 +51,6 @@
     ]
   },
   "dependencies": {
-    "saucie": "johanneswuerbach/sauce-js-tests-integration#fail-unfinished-runs"
+    "saucie": "johanneswuerbach/sauce-js-tests-integration#poll-until-finished"
   }
 }
