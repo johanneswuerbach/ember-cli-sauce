@@ -1,20 +1,16 @@
 ---
 language: node_js
-
 sudo: false
 env:
   global:
   - SAUCE_USERNAME=ember-cli-sauce-ci
   - SAUCE_ACCESS_KEY=be8498f4-3dc5-4256-94c6-40dd9247f2e6
-
 cache:
   directories:
     - node_modules
-
 before_install:
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+  - npm config set spin false
+  - npm install -g npm@^2
 install:
   - npm install -g bower
   - npm install
@@ -30,3 +26,10 @@ script:
 after_script:
   - sleep 10
   - killall sc
+deploy:
+  provider: npm
+  email: johannes.wuerbach@googlemail.com
+  api_key:
+    secure: mNmRaRq81AGRECvOKhsayidpH+UzkO2PEXrMjNg8SJG1y11TQeD8GiCLwBU92H0FaFy97GjqOzaJn5/p3CyLxih+thFG6u/+ZqjjpN0+xjgYgz/ZdDQjTSGzvonuDKyNS/svEGuSkiw8ms3UY616gMcUxQZ6/SMPQS0opFsjRu4=
+  on:
+    tags: true
