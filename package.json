@@ -53,6 +53,6 @@
     ]
   },
   "dependencies": {
-    "saucie": "johanneswuerbach/sauce-js-tests-integration#poll-until-finished"
+    "saucie": "^0.1.1"
   }
 }
