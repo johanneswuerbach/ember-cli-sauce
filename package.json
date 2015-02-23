@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-sauce",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Cross browser testing for your ember-cli app using SauceLabs.",
   "directories": {
     "doc": "doc",
