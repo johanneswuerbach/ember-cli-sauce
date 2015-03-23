@@ -1,22 +1,23 @@
 import Ember from 'ember';
+import {module, test} from 'qunit';
 import startApp from '../helpers/start-app';
 
 var application;
 
 module('Acceptance: ExportTestResults', {
-  setup: function() {
+  beforeEach: function() {
     application = startApp();
   },
-  teardown: function() {
+  afterEach: function() {
     Ember.run(application, 'destroy');
   }
 });
 
-test('registers the test export', function() {
+test('registers the test export', function(assert) {
   visit('/');
 
   andThen(function() {
-    strictEqual(window.global_test_results, null);
-    notEqual(QUnit.config.callbacks.done.indexOf(window.exportTestResultsForSauce), -1);
+    assert.strictEqual(window.global_test_results, null);
+    assert.notEqual(window.QUnit.config.callbacks.done.indexOf(window.exportTestResultsForSauce), -1);
   });
 });
