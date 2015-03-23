@@ -51,6 +51,7 @@
     ]
   },
   "dependencies": {
+    "rsvp": "^3.0.17",
     "saucie": "^0.1.1"
   }
 }
