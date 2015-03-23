@@ -15,14 +15,17 @@ Cross browser testing for your ember-cli app using SauceLabs.
 * Add browsers using `ember sauce --help`
 * During test runs an **open Sauce Connect tunnel is required**. You can create a tunnel using the following command:
 ```bash
-curl -L https://gist.githubusercontent.com/johanneswuerbach/ce15304c6d33538ecc6e/raw/sauce-connect.sh | bash
+ember start-sauce-connect
 ```
 
 ## Using on Travis
 * Add `SAUCE_USERNAME`, `SAUCE_ACCESS_KEY` and the following script to your `.travis.yml`
 ```yaml
 before_script:
-  - curl -L https://gist.githubusercontent.com/johanneswuerbach/ce15304c6d33538ecc6e/raw/sauce-connect.sh | bash
+  - ember start-sauce-connect
+
+after_script:
+  - ember stop-sauce-connect
 ```
 * Happy testing!
 
