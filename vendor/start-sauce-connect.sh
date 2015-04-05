@@ -30,7 +30,7 @@ if [ ! -z "${TRAVIS_JOB_NUMBER}" ]; then
   SC_TUNNEL_ID="-i ${TRAVIS_JOB_NUMBER}"
 fi
 echo "Downloading Sauce Connect"
-wget http://saucelabs.com/downloads/${SC_DISTRIBUTION}
+curl -O http://saucelabs.com/downloads/${SC_DISTRIBUTION}
 SC_ACTUAL_SHASUM="$(openssl sha1 ${SC_DISTRIBUTION} | cut -d' ' -f2)"
 if [[ "$SC_ACTUAL_SHASUM" != "$SC_DISTRIBUTION_SHASUM" ]]; then
     echo "SHA1 sum of Sauce Connect file didn't match!"
