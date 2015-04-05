@@ -34,6 +34,7 @@ wget http://saucelabs.com/downloads/${SC_DISTRIBUTION}
 SC_ACTUAL_SHASUM="$(openssl sha1 ${SC_DISTRIBUTION} | cut -d' ' -f2)"
 if [[ "$SC_ACTUAL_SHASUM" != "$SC_DISTRIBUTION_SHASUM" ]]; then
     echo "SHA1 sum of Sauce Connect file didn't match!"
+    echo "actual: $SC_ACTUAL_SHASUM expected: $SC_DISTRIBUTION_SHASUM"¬
     exit 1
 fi
 SC_DIR=$(tar -ztf ${SC_DISTRIBUTION} | head -n1)
