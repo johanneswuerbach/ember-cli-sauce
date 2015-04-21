@@ -22,10 +22,10 @@ ember start-sauce-connect
 * Add `SAUCE_USERNAME`, `SAUCE_ACCESS_KEY` and the following script to your `.travis.yml`
 ```yaml
 before_script:
-  - ember start-sauce-connect
+  - ember sauce:connect
 
 after_script:
-  - ember stop-sauce-connect
+  - ember sauce:disconnect
 ```
 * Happy testing!
 
