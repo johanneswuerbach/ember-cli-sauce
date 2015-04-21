@@ -4,7 +4,7 @@ Cross browser testing for your ember-cli app using SauceLabs.
 
 ## Installation
 
-* `ember install:addon ember-cli-sauce`
+* `ember install ember-cli-sauce`
 
 ## Usage
 
