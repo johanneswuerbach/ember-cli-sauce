@@ -27,7 +27,7 @@ install:
 before_script:
   - rm ./node_modules/.bin/ember-cli-sauce || true
   - ln -s $PWD/bin/cli.js ./node_modules/.bin/ember-cli-sauce
-  - ember start-sauce-connect
+  - ember sauce:connect
 
 script:
   - npm test
@@ -35,7 +35,7 @@ script:
 
 after_script:
   - sleep 10
-  - ember stop-sauce-connect
+  - ember sauce:disconnect
 
 deploy:
   provider: npm
