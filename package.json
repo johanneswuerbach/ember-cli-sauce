@@ -52,7 +52,8 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "after": [
-      "ember-cli-qunit"
+      "ember-cli-qunit",
+      "ember-cli-mocha"
     ]
   }
 }
