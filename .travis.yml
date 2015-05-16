@@ -5,16 +5,18 @@ node_js:
 
 sudo: false
 
+cache:
+  directories:
+    - node_modules
+
 env:
   global:
   - SAUCE_USERNAME=ember-cli-sauce-ci
   - SAUCE_ACCESS_KEY=be8498f4-3dc5-4256-94c6-40dd9247f2e6
 
-cache:
-  directories:
-    - node_modules
 
 before_install:
+  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
   - "npm config set spin false"
   - "npm install -g npm@^2"
 
