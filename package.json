@@ -48,6 +48,7 @@
   "dependencies": {
     "ember-cli-babel": "^5.0.0",
     "rsvp": "^3.0.17",
+    "sauce-connect-launcher": "^0.11.1",
     "saucie": "^0.1.1"
   },
   "ember-addon": {
