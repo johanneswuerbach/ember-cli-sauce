@@ -50,7 +50,7 @@
   ],
   "dependencies": {
     "rsvp": "^3.0.17",
-    "sauce-connect-launcher": "^0.11.1",
+    "sauce-connect-launcher": "^0.12.0",
     "saucie": "^0.1.5"
   },
   "ember-addon": {
