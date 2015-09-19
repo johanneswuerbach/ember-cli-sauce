@@ -49,9 +49,7 @@
     "testing"
   ],
   "dependencies": {
-    "rsvp": "^3.0.17",
-    "sauce-connect-launcher": "^0.12.0",
-    "saucie": "^0.1.7"
+    "saucie": "^1.0.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
