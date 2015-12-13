@@ -50,6 +50,7 @@
     "testing"
   ],
   "dependencies": {
+    "rsvp": "^3.1.0",
     "saucie": "^1.0.0"
   },
   "ember-addon": {
