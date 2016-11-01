@@ -18,6 +18,8 @@ test('registers the test export', function(assert) {
 
   andThen(function() {
     assert.strictEqual(window.global_test_results, null);
-    assert.notEqual(window.QUnit.config.callbacks.done.indexOf(window.exportTestResultsForSauce), -1);
+    assert.ok(window.QUnit.config.callbacks.done.some(function(fn) {
+      return fn.name === 'exportTestResultsForSauce';
+    }));
   });
 });
