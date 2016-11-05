@@ -58,6 +58,12 @@
     "rsvp": "^3.1.0",
     "saucie": "^1.0.0"
   },
+  "greenkeeper": {
+    "ignore": [
+      "ember-cli-jshint",
+      "ember-welcome-page"
+    ]
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "after": [
