@@ -54,7 +54,7 @@
     "testing"
   ],
   "dependencies": {
-    "recast": "0.11.15",
+    "recast": "0.11.17",
     "rsvp": "^3.1.0",
     "saucie": "^1.0.0"
   },
