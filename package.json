@@ -56,7 +56,7 @@
   "dependencies": {
     "recast": "^0.11.17",
     "rsvp": "^3.1.0",
-    "saucie": "^1.0.0"
+    "saucie": "johanneswuerbach/saucie#poll-without-watching"
   },
   "greenkeeper": {
     "ignore": [
