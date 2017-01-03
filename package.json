@@ -29,7 +29,7 @@
   "dependencies": {
     "recast": "^0.11.17",
     "rsvp": "^3.1.0",
-    "saucie": "^2.0.1"
+    "saucie": "^2.1.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
