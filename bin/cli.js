@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-require('saucie')();
+
+var saucie = require('saucie');
+var options = saucie.parseArgv(process.argv);
+
+saucie(options);
