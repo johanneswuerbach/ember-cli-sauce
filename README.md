@@ -15,7 +15,7 @@ Cross browser testing for your ember-cli app using SauceLabs.
 * Add browsers using `ember sauce --help`
 * During test runs an **open Sauce Connect tunnel is required**. You can create a tunnel using the following command:
 ```bash
-ember start-sauce-connect
+ember sauce:connect
 ```
 
 ### Use a different port 
