@@ -1,8 +1,13 @@
 /* global QUnit, after */
 (function() {
   window.global_test_results = null;
-
+  
   if (typeof QUnit !== 'undefined') {
+    var results = {
+      failed: 0,
+      passed: 0,
+      skipped: 0
+    };
     var log = [];
     // Custom data is limited to 64KB. Leave some padding for the other test
     // result data.
@@ -14,9 +19,9 @@
       return JSON.stringify(newLog).length > SIZE_LIMIT;
     }
 
-    function exportTestResultsForSauce(testResults) {
+    function exportTestResultsForSauce() {
       testResults.tests = log;
-      window.global_test_results = testResults;
+      window.global_test_results = results;
     }
 
     // Used for testing
@@ -44,6 +49,19 @@
       }
     });
 
+    QUnit.testDone(function(params) {
+      results.total++;
+
+      var testFailed = params.failed === 0 ? !params.todo : params.todo;
+
+      if (currentTest.skipped) {
+        results.skipped++;
+      } else if (testFailed) {
+        results.failed++;
+      } else {
+        results.passed++;
+      }
+    });
   } else if (typeof Mocha !== 'undefined') {
     after(function() {
       window.global_test_results = window.mochaRunner.stats;
