@@ -24,7 +24,7 @@ Some browsers (e.g. Safari & Edge) don't work with the default testem port and r
 ember test --test-port 7000
 ```
 
-Please vote on https://saucelabs.ideas.aha.io/ideas/SLIDEA-I-146, to have this working out of the box.
+Please vote on https://saucelabs.ideas.aha.io/ideas/SLIDEA-I-284, to have this working out of the box.
 
 ## Using on Travis
 * Add `SAUCE_USERNAME`, `SAUCE_ACCESS_KEY` and the following script to your `.travis.yml`
