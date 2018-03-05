@@ -26,6 +26,13 @@ ember test --test-port 7000
 
 Please vote on https://saucelabs.ideas.aha.io/ideas/SLIDEA-I-284, to have this working out of the box.
 
+### Use a different Sauce Connect Proxy version
+If you want to use a different [Sauce Connect Proxy version](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy+Change+Logs), 
+set the `SAUCE_VERSION` environment variable.
+```bash
+SAUCE_VERSION="4.4.12" ember sauce:connect
+```
+
 ## Using on Travis
 * Add `SAUCE_USERNAME`, `SAUCE_ACCESS_KEY` and the following script to your `.travis.yml`
 ```yaml
