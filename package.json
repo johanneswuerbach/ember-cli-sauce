@@ -27,7 +27,7 @@
   },
   "bin": "./bin/cli.js",
   "dependencies": {
-    "recast": "^0.14.0",
+    "recast": "^0.18.8",
     "rsvp": "^4.7.0",
     "saucie": "^3.2.0"
   },
